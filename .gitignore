@@ -35,3 +35,22 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 tmp
+
+# Rust
+**/target/
+**/*.rs.bk
+
+# Anchor
+.anchor/
+.DS_Store
+
+# Node
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
