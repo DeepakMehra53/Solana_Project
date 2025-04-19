@@ -54,3 +54,41 @@ build/
 
 # VSCode
 .vscode/
+
+# Rust
+**/target/
+**/*.rs.bk
+
+# Anchor
+.anchor/
+.DS_Store
+
+# Node
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# Rust
+**/target/
+**/*.rs.bk
+
+# Anchor
+.anchor/
+.DS_Store
+
+# Node
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
