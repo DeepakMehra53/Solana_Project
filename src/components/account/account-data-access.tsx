@@ -12,6 +12,14 @@ import {
   VersionedTransaction,
 } from '@solana/web3.js'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import toast from 'react-hot-toast'
+import { useTransactionToast } from '../ui/ui-layout'
+=======
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
 
 export function useGetBalance({ address }: { address: PublicKey }) {
   const { connection } = useConnection()
@@ -52,7 +60,15 @@ export function useGetTokenAccounts({ address }: { address: PublicKey }) {
 
 export function useTransferSol({ address }: { address: PublicKey }) {
   const { connection } = useConnection()
+<<<<<<< HEAD
   // const transactionToast = useTransactionToast()
+=======
+<<<<<<< HEAD
+  const transactionToast = useTransactionToast()
+=======
+  // const transactionToast = useTransactionToast()
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
   const wallet = useWallet()
   const client = useQueryClient()
 
@@ -82,6 +98,22 @@ export function useTransferSol({ address }: { address: PublicKey }) {
         return
       }
     },
+<<<<<<< HEAD
+    onSuccess: async (signature) => {
+=======
+<<<<<<< HEAD
+    onSuccess: (signature) => {
+>>>>>>> 5afa943 (fresh start)
+      if (signature) {
+        // TODO: Add back Toast
+        // transactionToast(signature)
+        console.log('Transaction sent', signature)
+      }
+<<<<<<< HEAD
+      await Promise.all([
+=======
+      return Promise.all([
+=======
     onSuccess: async (signature) => {
       if (signature) {
         // TODO: Add back Toast
@@ -89,6 +121,8 @@ export function useTransferSol({ address }: { address: PublicKey }) {
         console.log('Transaction sent', signature)
       }
       await Promise.all([
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
         client.invalidateQueries({
           queryKey: ['get-balance', { endpoint: connection.rpcEndpoint, address }],
         }),
@@ -97,16 +131,35 @@ export function useTransferSol({ address }: { address: PublicKey }) {
         }),
       ])
     },
+<<<<<<< HEAD
     onError: (error) => {
       // TODO: Add Toast
       console.error(`Transaction failed! ${error}`)
+=======
+<<<<<<< HEAD
+    onError: (error: unknown) => {
+      toast.error(`Transaction failed! ${error}`)
+=======
+    onError: (error) => {
+      // TODO: Add Toast
+      console.error(`Transaction failed! ${error}`)
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
     },
   })
 }
 
 export function useRequestAirdrop({ address }: { address: PublicKey }) {
   const { connection } = useConnection()
+<<<<<<< HEAD
   // const transactionToast = useTransactionToast()
+=======
+<<<<<<< HEAD
+  const transactionToast = useTransactionToast()
+=======
+  // const transactionToast = useTransactionToast()
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
   const client = useQueryClient()
 
   return useMutation({
@@ -120,11 +173,23 @@ export function useRequestAirdrop({ address }: { address: PublicKey }) {
       await connection.confirmTransaction({ signature, ...latestBlockhash }, 'confirmed')
       return signature
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    onSuccess: (signature) => {
+      transactionToast(signature)
+      return Promise.all([
+=======
+>>>>>>> 5afa943 (fresh start)
     onSuccess: async (signature) => {
       // TODO: Add back Toast
       // transactionToast(signature)
       console.log('Airdrop sent', signature)
       await Promise.all([
+<<<<<<< HEAD
+=======
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
         client.invalidateQueries({
           queryKey: ['get-balance', { endpoint: connection.rpcEndpoint, address }],
         }),

@@ -1,5 +1,30 @@
 'use client'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import dynamic from 'next/dynamic'
+import { AnchorProvider } from '@coral-xyz/anchor'
+>>>>>>> 5afa943 (fresh start)
+import { WalletError } from '@solana/wallet-adapter-base'
+import {
+  AnchorWallet,
+  ConnectionProvider,
+  useConnection,
+  useWallet,
+  WalletProvider,
+} from '@solana/wallet-adapter-react'
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
+import dynamic from 'next/dynamic'
+import { ReactNode, useCallback, useMemo } from 'react'
+import { useCluster } from '../cluster/cluster-data-access'
+<<<<<<< HEAD
+import '@solana/wallet-adapter-react-ui/styles.css'
+import { AnchorProvider } from '@coral-xyz/anchor'
+=======
+
+require('@solana/wallet-adapter-react-ui/styles.css')
+=======
 import { WalletError } from '@solana/wallet-adapter-base'
 import {
   AnchorWallet,
@@ -14,6 +39,8 @@ import { ReactNode, useCallback, useMemo } from 'react'
 import { useCluster } from '../cluster/cluster-data-access'
 import '@solana/wallet-adapter-react-ui/styles.css'
 import { AnchorProvider } from '@coral-xyz/anchor'
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
 
 export const WalletButton = dynamic(async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton, {
   ssr: false,

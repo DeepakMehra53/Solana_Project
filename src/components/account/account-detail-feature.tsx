@@ -2,11 +2,26 @@
 
 import { PublicKey } from '@solana/web3.js'
 import { useMemo } from 'react'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 5afa943 (fresh start)
+import { useParams } from 'next/navigation'
+import { ExplorerLink } from '../cluster/cluster-ui'
+import { AccountBalance, AccountButtons, AccountTokens, AccountTransactions } from './account-ui'
+<<<<<<< HEAD
+import { AppHero } from '../app-hero'
+import { ellipsify } from '@/lib/utils'
+=======
+=======
 import { useParams } from 'next/navigation'
 import { ExplorerLink } from '../cluster/cluster-ui'
 import { AccountBalance, AccountButtons, AccountTokens, AccountTransactions } from './account-ui'
 import { AppHero } from '../app-hero'
 import { ellipsify } from '@/lib/utils'
+>>>>>>> 8e1c1dc (chore: initial commit)
+>>>>>>> 5afa943 (fresh start)
 
 export default function AccountDetailFeature() {
   const params = useParams()
